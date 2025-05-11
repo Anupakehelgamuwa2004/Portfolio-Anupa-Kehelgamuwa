@@ -1,238 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dinira Pathirana's Website</title>
-    <link rel="icon" href="images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/c69f750e65.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dinira Pathirana | Full-Stack Developer</title>
+
+  <link rel="icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- icons + GSAP -->
+  <script src="https://kit.fontawesome.com/c69f750e65.js" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
 </head>
 <body>
 
-<!-- --header-- -->
+  <!-- ╭─ NAVIGATION BAR ───────────────────────────────────╮ -->
+  <nav class="navbar glass">
+    <a href="#header" class="brand">
+      <img src="../PortfolioWebsite/images/Logo_-_Anupa.png" alt="logo">
+    </a>
 
-<!-- kakki -->
+    <button class="nav-toggle" aria-label="toggle navigation">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
 
-<div id="header">
-    <div class="container">
-        <nav>
-            <img src="images/logo_transparent.png" class="logo">
-            <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <!-- <li><a href="#services">Services</a></li> -->
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <i class="fas fa-times" onclick="closemenu()"></i>
-            </ul>
-            <i class="fas fa-bars" onclick="openmenu()"></i>
+    <ul class="nav-links">
+      <li><a href="#header"    class="nav-item active">Home</a></li>
+      <li><a href="#about"     class="nav-item">About</a></li>
+      <li><a href="#portfolio" class="nav-item">Portfolio</a></li>
+      <li><a href="#contact"   class="nav-item">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ╭─ HERO ───────────────────────────────────────────────╮ -->
+  <header id="header" class="snap hero-section">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-inner container">
+      <h1 class="hero-heading">
+        <span class="hi">Hi, I’m</span>
+        <span class="name">Anupa Kehelgamuwa</span>
+      </h1>
+
+      <div class="typewriter-wrap">
+        <span class="typewriter-text">LEARN • ADAPT • DELIVER •</span>
+      </div>
+
+      <p class="meta-info">
+        <i class="fa-solid fa-code-branch"></i>
+        <span>Software Engineering Intern</span>
+
+        <i class="fa-solid fa-location-dot sep"></i>
+        <span>Colombo, Sri&nbsp;Lanka</span>
+
+        <i class="fa-solid fa-building sep"></i>
+        <a href="https://ossec.co.jp/" target="_blank">Ossec&nbsp;Inc.</a>
+      </p>
+
+      <div class="cta-buttons">
+        <a href="#portfolio" class="btn primary glow">View&nbsp;Portfolio</a>
+        <a href="#contact" class="btn outline">Connect</a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator"><span></span></div>
+  </header>
+
+  <!-- ╭─ ABOUT ──────────────────────────────────────────────╮ -->
+  <section id="about" class="snap reveal">
+    <div class="about-card">
+      <div class="avatar-blob">
+        <img src="../PortfolioWebsite/images/profile_pic.JPEG" alt="profile">
+      </div>
+
+      <div class="about-content">
+        <h2 class="about-title">About Me <span class="emoji">⚡</span></h2>
+
+        <p>
+          Hi! I’m <strong>Anupa Kehelgamuwa</strong>, a Sri-Lankan
+          <strong>Full-Stack Developer</strong> obsessed with building
+          <em>fast, beautiful, scalable</em> products. My toolbox overflows with
+          <em>Java · Spring Boot · Angular · Kotlin · Flutter · SQL</em>.
+        </p>
+
+        <p>
+          I’m wrapping up a <strong>BSc in Computer Science</strong>, and I’ve
+          already shipped <em>live ticketing platforms</em>, indie <em>3-D games</em>,
+          and multi-tenant <em>transaction systems</em>. I learn at lightspeed
+          and write code that feels like poetry.
+        </p>
+
+        <div class="stats">
+          <div><span class="counter" data-val="4">0</span><small>YEARS CODING</small></div>
+          <div><span class="counter" data-val="25">0</span><small>PROJECTS</small></div>
+          <div><span class="counter" data-val="734">0</span><small>CUPS OF COFFEE</small></div>
+        </div>
+
+        <nav class="tab-bar">
+          <button class="tab-btn active" onclick="openTab('skills')">Skills</button>
+          <button class="tab-btn"        onclick="openTab('edu')">Education</button>
+          <button class="tab-btn"        onclick="openTab('extra')">Extracurricular</button>
         </nav>
-        <div class="header-text">
-            <p>Software Engineering Intern</p>
-            <h1>Hi, I'm <span>Anupa</span><br>Kehelgamuwa From Sri Lanka</h1>
+
+        <div class="tab-panel active" id="skills">
+          <div class="chip-grid">
+            <span class="chip">Java</span><span class="chip">Spring Boot</span>
+            <span class="chip">Angular</span><span class="chip">Kotlin</span>
+            <span class="chip">Flutter</span><span class="chip">SQL</span>
+            <span class="chip">TypeScript</span><span class="chip">Express.js</span>
+          </div>
         </div>
+
+        <div class="tab-panel" id="edu">
+          <ul class="edu-list">
+            <li><span>UCLan — BSc (Hons) Software Engineering</span><em>Expected Aug 2025</em></li>
+            <li><span>Cambridge O-Levels</span><em>4 A* · 2 A · 1 B · 1 C</em></li>
+            <li><span>GCE A-Levels</span><em>2 C · 1 S</em></li>
+          </ul>
+        </div>
+
+        <div class="tab-panel" id="extra">
+          <ul class="extra-list">
+            <li>Junior & Senior Prefect</li>
+            <li>House Captain</li>
+            <li>Badminton Team · Chess Club</li>
+          </ul>
+        </div>
+      </div>
     </div>
-</div>
+  </section>
 
-<!-- --about-- -->
-
-<div id="about">
+  <!-- ╭─ PORTFOLIO ──────────────────────────────────────────╮ -->
+  <section id="portfolio" class="snap reveal">
     <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="images/blank-profile-picture-973460_1280.webp">
+      <h2 class="section-title">My Work</h2>
+
+      <div class="carousel-window">
+        <div class="carousel-track" id="track">
+
+          <!-- CARD 1 -->
+          <article class="card">
+            <div class="card-img"><img src="images/work1.png" alt="Ticketing System Backend"></div>
+            <div class="card-info">
+              <h3 class="card-title">Ticketing System Backend</h3>
+              <p class="card-desc">Node & Express API powering real-time ticket sales.</p>
+              <div class="tag-wrap">
+                <span class="tag">Node.js</span>
+                <span class="tag">Express</span>
+                <span class="tag">Socket.IO</span>
+              </div>
             </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p><br>Enthusiastic third year BSc (Hons) computer science student with a
-                    passion for coding, problem- solving, and game development. Seeking
-                    opportunities to apply my skills and knowledge to contribute to innovative
-                    projects.</p>
-                
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
-                    <p class="tab-links" onclick="opentab('extracurricular')">Extracurricular</p>
-                </div>
+            <span class="card-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </article>
 
-                <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>PROGRAMMING LANGUAGES</span><br>• C++, C#, Java, Python</li>
-                        <li><span>FRONT- END WEB DEVELOPMENT</span><br>• (HTML, CSS & JavaScript)</li>
-                        <li><span>MOBILE APP DEVELOPMENT</span><br>• Dart and Flutter</li>
-                        <li><span>GAME DEVELOPMENT</span><br>• Using TL-Engine (Game Engine created by UCLan)</li>
-                    </ul>
-                </div>
-
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>BSc Hons Software Engineering ( Second Year, Undergraduate)</span><br>• University of Central Lancashire (UCLan)<br>• Expected Graduation: August 2025</li>
-                        <li><span>High School Diploma</span><br>• Lyceum International School Wattala<br>• Cambridge O- Level (2020) Results : 4A* 2A 1B 1C<br>• GCE A- Level (2022) Results: 2C 1S</li>
-                    </ul>
-                </div>
-
-                <div class="tab-contents" id="extracurricular">
-                    <ul>
-                        <li><span>Junior Prefect ( 2017 - 2020 ) [ Lyceum International School Wattala ]</span><br></li>
-                        <li><span>Senior Prefect ( 2021 - 2022 ) [ Lyceum International School Wattala ]</span><br></li>
-                        <li><span>House Captain ( 2021 - 2022) [ Lyceum International School Wattala ]</span><br></li>
-                        <li><span>Badminton Team [ Lyceum International School Wattala ]</li>
-                        <li><span>Chess Club [ Lyceum International School Wattala ]</li>
-                    </ul>
-                </div>
-
+          <!-- duplicate cards … add your real projects -->
+          <article class="card">
+            <div class="card-img"><img src="images/work1.png" alt=""></div>
+            <div class="card-info">
+              <h3 class="card-title">Another Project</h3>
+              <p class="card-desc">Short project description goes here.</p>
+              <div class="tag-wrap">
+                <span class="tag">Tech1</span><span class="tag">Tech2</span>
+              </div>
             </div>
+            <span class="card-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </article>
+          <article class="card">
+            <div class="card-img"><img src="images/work1.png" alt=""></div>
+            <div class="card-info">
+              <h3 class="card-title">Another Project</h3>
+              <p class="card-desc">Short project description goes here.</p>
+              <div class="tag-wrap">
+                <span class="tag">Tech1</span><span class="tag">Tech2</span>
+              </div>
+            </div>
+            <span class="card-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </article>
+          <article class="card">
+            <div class="card-img"><img src="images/work1.png" alt=""></div>
+            <div class="card-info">
+              <h3 class="card-title">Another Project</h3>
+              <p class="card-desc">Short project description goes here.</p>
+              <div class="tag-wrap">
+                <span class="tag">Tech1</span><span class="tag">Tech2</span>
+              </div>
+            </div>
+            <span class="card-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </article>
+          <article class="card">
+            <div class="card-img"><img src="images/work1.png" alt=""></div>
+            <div class="card-info">
+              <h3 class="card-title">Another Project</h3>
+              <p class="card-desc">Short project description goes here.</p>
+              <div class="tag-wrap">
+                <span class="tag">Tech1</span><span class="tag">Tech2</span>
+              </div>
+            </div>
+            <span class="card-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </article>
+          <article class="card">
+            <div class="card-img"><img src="images/work1.png" alt=""></div>
+            <div class="card-info">
+              <h3 class="card-title">Another Project</h3>
+              <p class="card-desc">Short project description goes here.</p>
+              <div class="tag-wrap">
+                <span class="tag">Tech1</span><span class="tag">Tech2</span>
+              </div>
+            </div>
+            <span class="card-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </article>
+
         </div>
+      </div>
+
+      <div class="dots" id="dots"></div>
     </div>
-</div>
+  </section>
 
-<!-- --services-- -->
+  <!-- ╭─ CONTACT ────────────────────────────────────────────╮ -->
+  <section id="contact" class="snap reveal">
+    <div class="contact-wrap">
+      <div class="contact-grid">
+        <div class="contact-left">
+          <h2>Contact Me</h2>
+          <p><i class="fa-solid fa-paper-plane"></i> pathiranadinira@gmail.com</p>
+          <p><i class="fa-solid fa-square-phone"></i> +94 777 427 4044</p>
 
-<!-- <div id="services">
-    <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-code"></i>
-                <h2>Web Design</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis voluptatibus ipsa molestiae fugiat nobis maiores! Laboriosam expedita explicabo velit unde molestias? Labore, earum voluptatem pariatur veritatis ullam assumenda praesentium quos.</p>
-                <a href="">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-crop"></i>
-                <h2>UI/UX Design</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis voluptatibus ipsa molestiae fugiat nobis maiores! Laboriosam expedita explicabo velit unde molestias? Labore, earum voluptatem pariatur veritatis ullam assumenda praesentium quos.</p>
-                <a href="">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-brands fa-app-store"></i>
-                <h2>App Design</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis voluptatibus ipsa molestiae fugiat nobis maiores! Laboriosam expedita explicabo velit unde molestias? Labore, earum voluptatem pariatur veritatis ullam assumenda praesentium quos.</p>
-                <a href="">Learn more</a>
-            </div>
-        </div>
-    </div>
-</div> -->
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
 
-<!-- --portfolio-- -->
-
-<div id="portfolio">
-    <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
-            <div class="work">
-                <img src="images/work1.png">
-                <div class="layer">
-                    <h3>Quiz App for Programming Skills <br> (MIT App Inventor)</h3>
-                    <p>We built a programming quiz app with MIT App Inventor for the "Computer Challenge" module at the University of Central Lancashire. The app helps users assess their programming skills and knowledge, and we worked as a team to design the interface, implement questions, and evaluate responses.</p>
-                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/Screenshot (110).png">
-                <div class="layer">
-                    <h3>3D Car Game using TL Engine (C++)</h3>
-                    <p>In the "Game Concepts" module at the University of Central Lancashire, we created a 3D car game using the TL Engine, a UCLan-provided game engine. Our project involved implementing advanced features like collision detection and dynamic particle movement, showcasing our problem-solving skills and enriching our game development knowledge.</p>
-                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/sky.garden (1).jpg">
-                <div class="layer">
-                    <h3>Ecommerce Store (HTML, CSS, JavaScript)</h3>
-                    <p>I independently designed and developed an e-commerce website using HTML, CSS, and JavaScript. This project provided hands-on experience, enhancing my front-end proficiency, problem-solving skills, and showcasing my ability to create a functional and attractive online shopping platform. It deepened my knowledge and positioned me well for diverse career opportunities in the digital realm.</p>
-                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
+          <a href="images/Dinira_Pathirana_CV.pdf" download class="btn primary">Download CV</a>
         </div>
 
-        <a href="#portfolio" class="btn" id="show-more-button">See more</a>
+        <form class="contact-right">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn primary">Submit</button>
+        </form>
+      </div>
 
+      <footer class="footer-bar">© 2025 Dinira Pathirana · Made with ❤️</footer>
     </div>
-</div>
+  </section>
 
-<!-- --contact-- -->
-
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i> pathiranadinira@gmail.com</p>
-                <p><i class="fa-solid fa-square-phone"></i> +947774274044</p>
-                <div class="social-icons">
-                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-twitter-square"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-                <a href="images/Dinira_Pathirana_CV.pdf" download class="btn btn2">Download CV</a>
-            </div>
-            <div class="contact-right">
-                <form>
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="copyright">
-        <p>Copyright © DINIRA. Made with HTML, CSS & JS.</p>
-    </div>
-</div>
-
-
-<script>
-
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-
-</script>
-
-<script>
-
-    var sidemenu = document.getElementById("sidemenu");
-
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-
-    function closemenu(){
-        sidemenu.style.right = "-200px"
-    }
-
-</script>
-
-<!-- <script>
-
-    document.getElementById("show-more-button").addEventListener("click", function () {
-        var secondWorkList = document.querySelector(".work-list:nth-child(2)");
-        if (secondWorkList.style.display === "none" || secondWorkList.style.display === "") {
-            secondWorkList.style.display = "block";
-            this.textContent = "Show less";
-        } else {
-            secondWorkList.style.display = "none";
-            this.textContent = "See more";
-        }
+  <!-- ╭─ SCRIPTS ─────────────────────────────────────────────╮ -->
+  <script>
+    /* ─── Mobile nav toggle ─────────────────────────────── */
+    const toggle   = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      navLinks.classList.toggle('open');
     });
 
+    /* ─── Active link highlight on scroll ───────────────── */
+    const sections = ['header','about','portfolio','contact']
+      .map(id => document.getElementById(id));
+    window.addEventListener('scroll', () => {
+      let cur = sections[0].id;
+      sections.forEach(sec => {
+        if(window.scrollY + 95 >= sec.offsetTop) cur = sec.id;
+      });
+      document.querySelectorAll('.nav-item').forEach(a =>
+        a.classList.toggle('active', a.getAttribute('href') === '#' + cur)
+      );
+    });
 
-</script> -->
+    /* ─── Tabs ─────────────────────────────────────────── */
+    function openTab(id){
+      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+      document.getElementById(id).classList.add('active');
+    }
 
+    /* ─── Counters ─────────────────────────────────────── */
+    function runCounters(){
+      document.querySelectorAll('.counter').forEach(span=>{
+        const end = +span.dataset.val;
+        let cur = 0;
+        const step = Math.max(1, Math.ceil(end/50));
+        const tick = setInterval(()=>{
+          cur += step;
+          span.textContent = cur >= end ? end : cur;
+          if(cur >= end) clearInterval(tick);
+        }, 25);
+      });
+    }
 
+    /* ─── GSAP Reveal + Counter Trigger ────────────────── */
+    window.addEventListener('load', ()=>{
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.utils.toArray('.reveal').forEach(el=>{
+        gsap.from(el,{
+          opacity:0,
+          y:120,
+          duration:1,
+          ease:'back.out(1.7)',
+          scrollTrigger:{ trigger:el, start:'top 80%' }
+        });
+      });
+      ScrollTrigger.create({
+        trigger:'#about',
+        start:'top 55%',
+        once:true,
+        onEnter: runCounters
+      });
+    });
+
+    /* ─── Carousel Builder ────────────────────────────── */
+    const track = document.getElementById('track'),
+          dots  = document.getElementById('dots');
+    let idx = 0;
+
+    function buildCarousel(){
+      const cpp   = innerWidth > 1024 ? 3 : innerWidth > 600 ? 2 : 1;
+      const total = track.children.length;
+      const pages = Math.ceil(total / cpp);
+
+      const gapPx = parseFloat(getComputedStyle(track).gap);
+      const winW  = track.parentElement.clientWidth;
+      const cardW = (winW - gapPx * (cpp - 1)) / cpp;
+      const trackW = pages * winW + gapPx * (pages - 1);
+
+      track.style.width = trackW + 'px';
+      Array.from(track.children).forEach(card=>{
+        card.style.flex = `0 0 ${cardW}px`;
+      });
+
+      dots.innerHTML = '';
+      for(let i=0;i<pages;i++){
+        const d=document.createElement('span');
+        d.className='dot'+(i===0?' active':'');
+        d.onclick=()=>slide(i);
+        dots.appendChild(d);
+      }
+      track.dataset.pages=pages;
+      slide(0,false);
+    }
+
+    function slide(p,anim=true){
+      const pages=+track.dataset.pages;
+      idx=(p+pages)%pages;
+      track.style.transition=anim?'transform .6s ease':'none';
+      track.style.transform=`translateX(-${idx*(100/pages)}%)`;
+      dots.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active', i===idx));
+    }
+
+    setInterval(()=>slide(idx+1),7000);
+    window.addEventListener('resize', buildCarousel);
+    buildCarousel();
+
+    /* ─── 3-D Tilt on cards ────────────────────────────── */
+    document.querySelectorAll('.card').forEach(card=>{
+      const w=card.offsetWidth,h=card.offsetHeight,max=8;
+      card.addEventListener('mousemove',e=>{
+        const {offsetX:x,offsetY:y}=e;
+        const rotY=((x-w/2)/(w/2))*max;
+        const rotX=((y-h/2)/(h/2))*-max;
+        card.style.transform=`perspective(900px) rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+      });
+      card.addEventListener('mouseleave',()=>card.style.transform='perspective(900px)');
+    });
+  </script>
 </body>
 </html>
