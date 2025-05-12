@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anupa Kehelgamuwa | AK</title>
 
-  <link rel="icon" href="images\Anupa_-_Web_Tab_logo.png" />
+  <link rel="icon" href="images/Anupa_-_Web_Tab_logo.png" />
   <link rel="stylesheet" href="styles.css" />
 
   <!-- icons + GSAP -->
@@ -14,14 +14,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
 
-
-<meta property="og:title" content="Anupa Kehel" />
-    <meta property="og:description" content="Hi, It's me Anupa Kehelgamuwa" />
-    <meta property="og:image" content="https://media.discordapp.net/attachments/1255768997580902491/1371604334743126046/Anupa_-_Meta.png?ex=6823bd94&is=68226c14&hm=94f2ae1dd212b433cf0fd7ca0625a92176d413111168dab9c1612466c77451f2&format=webp&quality=lossless&" />
-    <meta property="og:url" content="https://anupainfo.vercel.app/" />
-    <meta property="og:type" content="website" />
-
+  <!--  Open-Graph stuff  -->
+  <meta property="og:title"       content="Anupa Kehel" />
+  <meta property="og:description" content="Hi, It's me Anupa Kehelgamuwa" />
+  <meta property="og:image"       content="https://media.discordapp.net/attachments/1255768997580902491/1371604334743126046/Anupa_-_Meta.png?ex=6823bd94&is=68226c14&hm=94f2ae1dd212b433cf0fd7ca0625a92176d413111168dab9c1612466c77451f2&format=webp&quality=lossless&" />
+  <meta property="og:url"         content="https://anupainfo.vercel.app/" />
+  <meta property="og:type"        content="website" />
 </head>
+
 <body>
 
   <!-- ╭─ NAVIGATION BAR ───────────────────────────────╮ -->
@@ -143,17 +143,18 @@
   </section>
 
   <!-- ╭─ PORTFOLIO ────────────────────────────────────────╮ -->
-    <section id="portfolio" class="snap reveal">
+  <section id="portfolio" class="snap reveal">
     <div class="container">
       <h2 class="section-title">My Work</h2>
+
       <div class="carousel-window">
         <div class="carousel-track" id="track">
-          <!-- CARD 1 -->
+          <!-- card 1 -->
           <article class="card">
             <div class="card-img"><img src="images/work1.png" alt=""></div>
             <div class="card-info">
               <h3 class="card-title">Realtime-Ticketing System</h3>
-              <p class="card-desc">Java Spring Boot & Angular API powering real-time ticket-sales.</p>
+              <p  class="card-desc">Java Spring Boot &amp; Angular API powering real-time ticket-sales.</p>
               <div class="tag-wrap">
                 <span class="tag">Java</span><span class="tag">Spring Boot</span>
                 <span class="tag">Angular</span><span class="tag">SQL</span>
@@ -162,12 +163,12 @@
             <span class="card-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
           </article>
 
-          <!-- duplicate / sample -->
+          <!-- card 2 -->
           <article class="card">
             <div class="card-img"><img src="images/work1.png" alt=""></div>
             <div class="card-info">
               <h3 class="card-title">Project Infratrack</h3>
-              <p class="card-desc">Community infrastructure reporting app + ML model.</p>
+              <p  class="card-desc">Community infrastructure reporting app + ML model.</p>
               <div class="tag-wrap">
                 <span class="tag">Java</span><span class="tag">Spring Boot</span>
                 <span class="tag">Python</span><span class="tag">Flutter</span><span class="tag">MongoDB</span>
@@ -176,19 +177,20 @@
             <span class="card-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
           </article>
 
+          <!-- card 3 -->
           <article class="card">
             <div class="card-img"><img src="images/work1.png" alt=""></div>
             <div class="card-info">
-              <h3 class="card-title">Dice Game</h3>
-              <p class="card-desc">A simple dice-game built with Kotlin + Jetpack Compose.</p>
+              <h3  class="card-title">Dice Game</h3>
+              <p   class="card-desc">A simple dice-game built with Kotlin + Jetpack Compose.</p>
               <div class="tag-wrap"><span class="tag">Kotlin</span></div>
             </div>
             <span class="card-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
           </article>
-        </div>
-      </div>
+        </div><!-- /track -->
+      </div><!-- /carousel-window -->
       <div class="dots" id="dots"></div>
-    </div>
+    </div><!-- /container -->
   </section>
 
   <!-- ╭─ CONTACT ──────────────────────────────────────────╮ -->
@@ -213,7 +215,7 @@
           <a href="https://github.com/Anupakehelgamuwa2004"      target="_blank"><i class="fa-brands fa-github"></i></a>
         </div>
 
-        <a href="images/Dinira_Pathirana_CV.pdf" download class="btn primary">Download CV</a>
+        <a href="images/Anupa KEHELGAMUWA.pdf" download class="btn primary">Download CV</a>
       </aside>
 
       <!-- right panel -->
@@ -247,15 +249,15 @@
   </section>
 
   <!-- ╭─ SCRIPTS ───────────────────────────────────────────╮ -->
+ <!-- ╭─ SCRIPTS ───────────────────────────────────────────╮ -->
   <script>
-    /* ─── mobile-nav toggle ─────────────────────────────── */
+    /* ── mobile-nav toggle ─────────────────────────────── */
     const toggle   = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
     toggle.addEventListener('click', () => {
       toggle.classList.toggle('open');
       navLinks.classList.toggle('open');
     });
-    /* close menu after item click */
     navLinks.addEventListener('click', e => {
       if (e.target.classList.contains('nav-item')) {
         toggle.classList.remove('open');
@@ -263,20 +265,20 @@
       }
     });
 
-    /* ─── active-link highlight on scroll ──────────────── */
+    /* ── active-link highlight on scroll ──────────────── */
     const sections = ['header','about','portfolio','contact']
       .map(id => document.getElementById(id));
     window.addEventListener('scroll', () => {
       let cur = sections[0].id;
       sections.forEach(sec => {
-        if (window.scrollY + 95 >= sec.offsetTop) cur = sec.id;
+        if (scrollY + 95 >= sec.offsetTop) cur = sec.id;
       });
       document.querySelectorAll('.nav-item').forEach(a =>
         a.classList.toggle('active', a.getAttribute('href') === '#' + cur)
       );
     });
 
-    /* ─── tabs ─────────────────────────────────────────── */
+    /* ── tab bar ───────────────────────────────────────── */
     function openTab(id){
       document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
       document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
@@ -284,12 +286,11 @@
       document.getElementById(id).classList.add('active');
     }
 
-    /* ─── counters ─────────────────────────────────────── */
+    /* ── counters ─────────────────────────────────────── */
     function runCounters(){
       document.querySelectorAll('.counter').forEach(span=>{
         const end = +span.dataset.val;
-        let cur = 0;
-        const step = Math.max(1, Math.ceil(end/50));
+        let cur = 0, step = Math.max(1, Math.ceil(end/50));
         const tick = setInterval(()=>{
           cur += step;
           span.textContent = cur >= end ? end : cur;
@@ -298,7 +299,7 @@
       });
     }
 
-    /* ─── GSAP reveal + counter trigger ────────────────── */
+    /* ── GSAP reveal + counter trigger ────────────────── */
     window.addEventListener('load', ()=>{
       gsap.registerPlugin(ScrollTrigger);
       gsap.utils.toArray('.reveal').forEach(el=>{
@@ -316,26 +317,29 @@
       });
     });
 
-    /* ─── carousel builder ─────────────────────────────── */
+    /* ── carousel (new slide maths) ───────────────────── */
     const track = document.getElementById('track'),
           dots  = document.getElementById('dots');
     let idx = 0;
 
+    function getSizes(){
+      const gap   = parseFloat(getComputedStyle(track).gap);
+      const winW  = track.parentElement.clientWidth;
+      return {gap, winW};
+    }
+
     function buildCarousel(){
-      const cpp   = innerWidth > 1024 ? 3 : innerWidth > 640 ? 2 : 1;
+      const {gap, winW} = getSizes();
+      const cpp   = innerWidth > 1024 ? 3 : innerWidth > 640 ? 2 : 1; // cards / page
       const total = track.children.length;
       const pages = Math.ceil(total / cpp);
 
       /* dynamic sizing */
-      const gapPx = parseFloat(getComputedStyle(track).gap);
-      const winW  = track.parentElement.clientWidth;
-      const cardW = (winW - gapPx * (cpp - 1)) / cpp;
-      const trackW = pages * winW + gapPx * (pages - 1);
+      const cardW = (winW - gap * (cpp - 1)) / cpp;
+      const trackW = pages * winW + gap * (pages - 1);
 
       track.style.width = trackW + 'px';
-      Array.from(track.children).forEach(card=>{
-        card.style.flex = `0 0 ${cardW}px`;
-      });
+      [...track.children].forEach(c => c.style.flex = `0 0 ${cardW}px`);
 
       /* dots */
       dots.innerHTML = '';
@@ -345,38 +349,44 @@
         d.onclick=()=>slide(i);
         dots.appendChild(d);
       }
-      track.dataset.pages=pages;
+      track.dataset.pages = pages;
       slide(0,false);
     }
 
-    function slide(p,anim=true){
-      const pages=+track.dataset.pages;
-      idx=(p+pages)%pages;
-      track.style.transition=anim?'transform .6s ease':'none';
-      track.style.transform=`translateX(-${idx*(100/pages)}%)`;
+    function slide(p, anim=true){
+      const pages = +track.dataset.pages;
+      idx = (p + pages) % pages;
+
+      const {gap, winW} = getSizes();           // fresh sizes every time
+      const offset = idx * (winW + gap);        // exact-pixel translation
+
+      track.style.transition = anim ? 'transform .6s ease' : 'none';
+      track.style.transform  = `translateX(-${offset}px)`;
+
       dots.querySelectorAll('.dot').forEach((d,i)=>
-        d.classList.toggle('active', i===idx)
+        d.classList.toggle('active', i === idx)
       );
     }
 
     setInterval(()=>slide(idx+1),7000);
-    window.addEventListener('resize', buildCarousel);
+    addEventListener('resize', buildCarousel);
     buildCarousel();
 
-    /* ─── 3-D tilt on cards ────────────────────────────── */
+    /* ── 3-D tilt (unchanged) ─────────────────────────── */
     document.querySelectorAll('.card').forEach(card=>{
       const max=8;
       card.addEventListener('mousemove',e=>{
-        const rect = card.getBoundingClientRect(),
-              x = e.clientX - rect.left,
-              y = e.clientY - rect.top,
-              rotY = ((x-rect.width/2)/(rect.width/2))*max,
-              rotX = ((y-rect.height/2)/(rect.height/2))*-max;
+        const r = card.getBoundingClientRect(),
+              x = e.clientX - r.left,
+              y = e.clientY - r.top,
+              rotY = ((x - r.width/2) / (r.width/2))  * max,
+              rotX = ((y - r.height/2) / (r.height/2)) * -max;
         card.style.transform=`perspective(900px) rotateX(${rotX}deg) rotateY(${rotY}deg)`;
       });
       card.addEventListener('mouseleave',()=>card.style.transform='perspective(900px)');
     });
   </script>
+
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script type="text/javascript">
   (function() {
