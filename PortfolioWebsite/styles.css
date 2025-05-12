@@ -933,3 +933,30 @@ body {
     flex: 0 0 100%;
   }
 }
+/* ─────────────────────────────────────────────────────────
+   MOBILE FIX: remove horizontal scroll & center the cards
+   Applies to screens up to 480px wide
+   ───────────────────────────────────────────────────────── */
+html,
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 480px) {
+  /* give the carousel a little breathing room each side */
+  .carousel-window {
+    padding: 0 4vw;
+  }
+
+  /* shrink the gap a touch so it’s proportional on small screens */
+  .carousel-track {
+    gap: 24px;
+  }
+
+  /* make each card fill the padded area exactly */
+  .card {
+    /* 100% of the padded carousel width = screen minus 8vw total */
+    flex: 0 0 calc(100% - 8vw) !important;
+    max-width: calc(100% - 8vw) !important;
+  }
+}
