@@ -214,27 +214,28 @@
       </aside>
 
       <!-- right panel -->
-      <form class="contact-form" autocomplete="off">
-        <div class="input-wrap">
-          <input type="text" id="name" required placeholder=" " />
-          <label for="name"><i class="fa-solid fa-user"></i> Your Name</label>
-        </div>
+      <form class="contact-form" id="contact-form" onsubmit="emailSend(event); return false;">
+  <div class="input-wrap">
+    <input type="text" id="name" name="user_name" required placeholder=" " />
+    <label for="name"><i class="fa-solid fa-user"></i> Your Name</label>
+  </div>
 
-        <div class="input-wrap">
-          <input type="email" id="email" required placeholder=" " />
-          <label for="email"><i class="fa-solid fa-at"></i> Email Address</label>
-        </div>
+  <div class="input-wrap">
+    <input type="email" id="email" name="user_email" required placeholder=" " />
+    <label for="email"><i class="fa-solid fa-at"></i> Email Address</label>
+  </div>
 
-        <div class="input-wrap textarea">
-          <textarea id="message" rows="6" required placeholder=" "></textarea>
-          <label for="message"><i class="fa-solid fa-message"></i> Message</label>
-        </div>
+  <div class="input-wrap textarea">
+    <textarea id="message" name="message" rows="6" required placeholder=" "></textarea>
+    <label for="message"><i class="fa-solid fa-message"></i> Message</label>
+  </div>
 
-        <button type="submit" class="btn primary glow send-btn">
-          <span>Send&nbsp;Message</span>
-          <i class="fa-solid fa-paper-plane"></i>
-        </button>
-      </form>
+  <button type="submit" class="btn primary glow send-btn">
+    <span>Send&nbsp;Message</span>
+    <i class="fa-solid fa-paper-plane"></i>
+  </button>
+</form>
+
     </div>
 
     <footer class="footer-bar">
@@ -373,5 +374,33 @@
       card.addEventListener('mouseleave',()=>card.style.transform='perspective(900px)');
     });
   </script>
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function() {
+    emailjs.init("ASVOFc88uy1njgDYd"); // from EmailJS dashboard
+  })();
+</script>
+<!-- EmailJS SDK -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("2SaRuPtHQNERtiCGc"); // Your public key
+  })();
+
+  function emailSend(event) {
+    event.preventDefault();
+    
+    const form = document.getElementById("contact-form");
+
+    emailjs.sendForm('service_dyygz05', 'template_yheweol', form)
+      .then(() => {
+        alert("✅ Email sent successfully!");
+        form.reset();
+      }, (error) => {
+        alert("❌ Failed to send email: " + error.text);
+      });
+  }
+</script>
+
 </body>
 </html>
