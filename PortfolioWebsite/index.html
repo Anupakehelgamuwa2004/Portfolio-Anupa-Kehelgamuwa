@@ -1,3 +1,4 @@
+<!-- =====================  index.html  ===================== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,10 +16,10 @@
 </head>
 <body>
 
-  <!-- ╭─ NAVIGATION BAR ───────────────────────────────────╮ -->
+  <!-- ╭─ NAVIGATION BAR ───────────────────────────────╮ -->
   <nav class="navbar glass">
     <a href="#header" class="brand">
-      <img src="../PortfolioWebsite/images/Logo_-_Anupa.png" alt="logo">
+      <img src="images/Logo_-_Anupa.png" alt="logo">
     </a>
 
     <button class="nav-toggle" aria-label="toggle navigation">
@@ -33,7 +34,7 @@
     </ul>
   </nav>
 
-  <!-- ╭─ HERO ───────────────────────────────────────────────╮ -->
+  <!-- ╭─ HERO ───────────────────────────────────────────╮ -->
   <header id="header" class="snap hero-section">
     <div class="hero-overlay"></div>
 
@@ -67,36 +68,37 @@
     <div class="scroll-indicator"><span></span></div>
   </header>
 
-  <!-- ╭─ ABOUT ──────────────────────────────────────────────╮ -->
+  <!-- ╭─ ABOUT ──────────────────────────────────────────╮ -->
   <section id="about" class="snap reveal">
     <div class="about-card">
       <div class="avatar-blob">
-        <img src="../PortfolioWebsite/images/profile_pic.JPEG" alt="profile">
+        <img src="images/profile_pic.JPEG" alt="profile">
       </div>
 
       <div class="about-content">
         <h2 class="about-title">About Me <span class="emoji">⚡</span></h2>
 
-        <p>
-          Hi! I’m <strong>Anupa Kehelgamuwa</strong>, a Sri-Lankan
-          <strong>Full-Stack Developer</strong> obsessed with building
-          <em>fast, beautiful, scalable</em> products. My toolbox overflows with
-          <em>Java · Spring Boot · Angular · Kotlin · Flutter · SQL</em>.
+        <p class="about-text">
+          Hi! I’m <strong class="highlight">Anupa Kehelgamuwa</strong>, a Sri-Lankan
+          <strong class="highlight">Full-Stack Developer</strong> obsessed with building fast,
+          scalable products. My toolbox overflows with:<br>
+          <span class="tool-list">· Java · Spring Boot · Angular · Kotlin · Flutter · SQL</span>
         </p>
 
-        <p>
-          I’m wrapping up a <strong>BSc in Computer Science</strong>, and I’ve
-          already shipped <em>live ticketing platforms</em>, indie <em>3-D games</em>,
-          and multi-tenant <em>transaction systems</em>. I learn at lightspeed
-          and write code that feels like poetry.
+        <p class="about-text">
+          I’m wrapping up a <strong class="highlight">BSc in Computer Science</strong>, and I’ve
+          already shipped live ticketing platforms, indie&nbsp;3-D games, and multi-tenant
+          transaction systems. I learn at lightspeed and write code that feels like poetry.
         </p>
 
+        <!-- stats -->
         <div class="stats">
           <div><span class="counter" data-val="4">0</span><small>YEARS CODING</small></div>
           <div><span class="counter" data-val="25">0</span><small>PROJECTS</small></div>
           <div><span class="counter" data-val="734">0</span><small>CUPS OF COFFEE</small></div>
         </div>
 
+        <!-- tabs -->
         <nav class="tab-bar">
           <button class="tab-btn active" onclick="openTab('skills')">Skills</button>
           <button class="tab-btn"        onclick="openTab('edu')">Education</button>
@@ -108,109 +110,77 @@
             <span class="chip">Java</span><span class="chip">Spring Boot</span>
             <span class="chip">Angular</span><span class="chip">Kotlin</span>
             <span class="chip">Flutter</span><span class="chip">SQL</span>
-            <span class="chip">TypeScript</span><span class="chip">Express.js</span>
+            <span class="chip">TypeScript</span><span class="chip">PHP</span>
+            <span class="chip">Python</span>
           </div>
         </div>
 
         <div class="tab-panel" id="edu">
           <ul class="edu-list">
-            <li><span>UCLan — BSc (Hons) Software Engineering</span><em>Expected Aug 2025</em></li>
-            <li><span>Cambridge O-Levels</span><em>4 A* · 2 A · 1 B · 1 C</em></li>
-            <li><span>GCE A-Levels</span><em>2 C · 1 S</em></li>
+            <li><span>IIT — BSc (Hons) Computer Science</span><em>&nbsp;Expected&nbsp;Aug&nbsp;2027</em></li>
+            <li><span>GCE A-Levels</span><em>&nbsp;3 A</em></li>
+            <li><span>GCE O-Levels</span><em>&nbsp;8 A&nbsp;· 1 B</em></li>
           </ul>
         </div>
 
         <div class="tab-panel" id="extra">
           <ul class="extra-list">
-            <li>Junior & Senior Prefect</li>
-            <li>House Captain</li>
-            <li>Badminton Team · Chess Club</li>
+            <li>Junior Steward of Royal&nbsp;College</li>
+            <li>Committee member — Roy-Tho Battle of the Blues</li>
+            <li>Committee member — Interact Club of Royal College</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ╭─ PORTFOLIO ──────────────────────────────────────────╮ -->
+  <!-- ╭─ PORTFOLIO ────────────────────────────────────────╮ -->
   <section id="portfolio" class="snap reveal">
     <div class="container">
       <h2 class="section-title">My Work</h2>
 
       <div class="carousel-window">
         <div class="carousel-track" id="track">
-
           <!-- CARD 1 -->
           <article class="card">
             <div class="card-img"><img src="images/work1.png" alt="Ticketing System Backend"></div>
             <div class="card-info">
-              <h3 class="card-title">Ticketing System Backend</h3>
-              <p class="card-desc">Node & Express API powering real-time ticket sales.</p>
+              <h3 class="card-title">Realtime-Ticketing System</h3>
+              <p class="card-desc">Java Spring Boot & Angular API powering real-time ticket sales.</p>
               <div class="tag-wrap">
-                <span class="tag">Node.js</span>
-                <span class="tag">Express</span>
-                <span class="tag">Socket.IO</span>
+                <span class="tag">Java</span><span class="tag">Spring Boot</span>
+                <span class="tag">Angular</span><span class="tag">SQL</span>
               </div>
             </div>
             <span class="card-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
           </article>
 
-          <!-- duplicate cards … add your real projects -->
+          <!-- duplicate / sample cards -->
           <article class="card">
             <div class="card-img"><img src="images/work1.png" alt=""></div>
             <div class="card-info">
-              <h3 class="card-title">Another Project</h3>
-              <p class="card-desc">Short project description goes here.</p>
+              <h3 class="card-title">Project Infratrack</h3>
+              <p class="card-desc">Community infrastructure reporting app&nbsp;+ ML model</p>
               <div class="tag-wrap">
-                <span class="tag">Tech1</span><span class="tag">Tech2</span>
-              </div>
-            </div>
-            <span class="card-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-          </article>
-          <article class="card">
-            <div class="card-img"><img src="images/work1.png" alt=""></div>
-            <div class="card-info">
-              <h3 class="card-title">Another Project</h3>
-              <p class="card-desc">Short project description goes here.</p>
-              <div class="tag-wrap">
-                <span class="tag">Tech1</span><span class="tag">Tech2</span>
-              </div>
-            </div>
-            <span class="card-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-          </article>
-          <article class="card">
-            <div class="card-img"><img src="images/work1.png" alt=""></div>
-            <div class="card-info">
-              <h3 class="card-title">Another Project</h3>
-              <p class="card-desc">Short project description goes here.</p>
-              <div class="tag-wrap">
-                <span class="tag">Tech1</span><span class="tag">Tech2</span>
-              </div>
-            </div>
-            <span class="card-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-          </article>
-          <article class="card">
-            <div class="card-img"><img src="images/work1.png" alt=""></div>
-            <div class="card-info">
-              <h3 class="card-title">Another Project</h3>
-              <p class="card-desc">Short project description goes here.</p>
-              <div class="tag-wrap">
-                <span class="tag">Tech1</span><span class="tag">Tech2</span>
-              </div>
-            </div>
-            <span class="card-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-          </article>
-          <article class="card">
-            <div class="card-img"><img src="images/work1.png" alt=""></div>
-            <div class="card-info">
-              <h3 class="card-title">Another Project</h3>
-              <p class="card-desc">Short project description goes here.</p>
-              <div class="tag-wrap">
-                <span class="tag">Tech1</span><span class="tag">Tech2</span>
+                <span class="tag">Java</span><span class="tag">Spring Boot</span>
+                <span class="tag">Python</span><span class="tag">Flutter</span>
+                <span class="tag">MongoDB</span>
               </div>
             </div>
             <span class="card-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
           </article>
 
+          <article class="card">
+            <div class="card-img"><img src="images/work1.png" alt=""></div>
+            <div class="card-info">
+              <h3 class="card-title">Dice Game</h3>
+              <p class="card-desc">A simple dice game using Kotlin + Jetpack Compose.</p>
+              <div class="tag-wrap"><span class="tag">Kotlin</span></div>
+            </div>
+            <span class="card-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </article>
+
+          <!-- …add more real projects as needed -->
         </div>
       </div>
 
@@ -218,60 +188,91 @@
     </div>
   </section>
 
-  <!-- ╭─ CONTACT ────────────────────────────────────────────╮ -->
+  <!-- ╭─ CONTACT ──────────────────────────────────────────╮ -->
   <section id="contact" class="snap reveal">
-    <div class="contact-wrap">
-      <div class="contact-grid">
-        <div class="contact-left">
-          <h2>Contact Me</h2>
-          <p><i class="fa-solid fa-paper-plane"></i> pathiranadinira@gmail.com</p>
-          <p><i class="fa-solid fa-square-phone"></i> +94 777 427 4044</p>
+    <div class="contact-card">
 
-          <div class="social-icons">
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-          </div>
+      <!-- left panel -->
+      <aside class="contact-info">
+        <h2>Get in Touch</h2>
+        <p class="tagline">Have a project or just want to say hi?<br>Feel free to reach out 👋</p>
 
-          <a href="images/Dinira_Pathirana_CV.pdf" download class="btn primary">Download CV</a>
+        <ul class="info-list">
+          <li><i class="fa-solid fa-envelope"></i> anupakehelgamuwa.04@gmail.com</li>
+          <li><i class="fa-solid fa-phone"></i> +94&nbsp;76&nbsp;393&nbsp;7851</li>
+          <li><i class="fa-solid fa-location-dot"></i> Colombo, Sri&nbsp;Lanka</li>
+        </ul>
+
+        <div class="social-row">
+          <a href="https://www.facebook.com/anupa.kehelgamuwa"  target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/anupa_.kehelgamuwa" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/anupa-kehelgamuwa-126289230/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/Anupakehelgamuwa2004"      target="_blank"><i class="fa-brands fa-github"></i></a>
         </div>
 
-        <form class="contact-right">
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
-          <textarea rows="6" placeholder="Your Message"></textarea>
-          <button type="submit" class="btn primary">Submit</button>
-        </form>
-      </div>
+        <a href="images/Dinira_Pathirana_CV.pdf" download class="btn primary">Download CV</a>
+      </aside>
 
-      <footer class="footer-bar">© 2025 Dinira Pathirana · Made with ❤️</footer>
+      <!-- right panel -->
+      <form class="contact-form" autocomplete="off">
+        <div class="input-wrap">
+          <input type="text" id="name" required placeholder=" " />
+          <label for="name"><i class="fa-solid fa-user"></i> Your Name</label>
+        </div>
+
+        <div class="input-wrap">
+          <input type="email" id="email" required placeholder=" " />
+          <label for="email"><i class="fa-solid fa-at"></i> Email Address</label>
+        </div>
+
+        <div class="input-wrap textarea">
+          <textarea id="message" rows="6" required placeholder=" "></textarea>
+          <label for="message"><i class="fa-solid fa-message"></i> Message</label>
+        </div>
+
+        <button type="submit" class="btn primary glow send-btn">
+          <span>Send&nbsp;Message</span>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
     </div>
+
+    <footer class="footer-bar">
+      © 2025 Anupa Kehelgamuwa · Made with ❤️
+    </footer>
   </section>
 
-  <!-- ╭─ SCRIPTS ─────────────────────────────────────────────╮ -->
+  <!-- ╭─ SCRIPTS ───────────────────────────────────────────╮ -->
   <script>
-    /* ─── Mobile nav toggle ─────────────────────────────── */
+    /* ─── mobile-nav toggle ─────────────────────────────── */
     const toggle   = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
     toggle.addEventListener('click', () => {
       toggle.classList.toggle('open');
       navLinks.classList.toggle('open');
     });
+    /* close menu after item click */
+    navLinks.addEventListener('click', e => {
+      if (e.target.classList.contains('nav-item')) {
+        toggle.classList.remove('open');
+        navLinks.classList.remove('open');
+      }
+    });
 
-    /* ─── Active link highlight on scroll ───────────────── */
+    /* ─── active-link highlight on scroll ──────────────── */
     const sections = ['header','about','portfolio','contact']
       .map(id => document.getElementById(id));
     window.addEventListener('scroll', () => {
       let cur = sections[0].id;
       sections.forEach(sec => {
-        if(window.scrollY + 95 >= sec.offsetTop) cur = sec.id;
+        if (window.scrollY + 95 >= sec.offsetTop) cur = sec.id;
       });
       document.querySelectorAll('.nav-item').forEach(a =>
         a.classList.toggle('active', a.getAttribute('href') === '#' + cur)
       );
     });
 
-    /* ─── Tabs ─────────────────────────────────────────── */
+    /* ─── tabs ─────────────────────────────────────────── */
     function openTab(id){
       document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
       document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
@@ -279,7 +280,7 @@
       document.getElementById(id).classList.add('active');
     }
 
-    /* ─── Counters ─────────────────────────────────────── */
+    /* ─── counters ─────────────────────────────────────── */
     function runCounters(){
       document.querySelectorAll('.counter').forEach(span=>{
         const end = +span.dataset.val;
@@ -293,14 +294,12 @@
       });
     }
 
-    /* ─── GSAP Reveal + Counter Trigger ────────────────── */
+    /* ─── GSAP reveal + counter trigger ────────────────── */
     window.addEventListener('load', ()=>{
       gsap.registerPlugin(ScrollTrigger);
       gsap.utils.toArray('.reveal').forEach(el=>{
         gsap.from(el,{
-          opacity:0,
-          y:120,
-          duration:1,
+          opacity:0, y:120, duration:1,
           ease:'back.out(1.7)',
           scrollTrigger:{ trigger:el, start:'top 80%' }
         });
@@ -313,16 +312,17 @@
       });
     });
 
-    /* ─── Carousel Builder ────────────────────────────── */
+    /* ─── carousel builder ─────────────────────────────── */
     const track = document.getElementById('track'),
           dots  = document.getElementById('dots');
     let idx = 0;
 
     function buildCarousel(){
-      const cpp   = innerWidth > 1024 ? 3 : innerWidth > 600 ? 2 : 1;
+      const cpp   = innerWidth > 1024 ? 3 : innerWidth > 640 ? 2 : 1;
       const total = track.children.length;
       const pages = Math.ceil(total / cpp);
 
+      /* dynamic sizing */
       const gapPx = parseFloat(getComputedStyle(track).gap);
       const winW  = track.parentElement.clientWidth;
       const cardW = (winW - gapPx * (cpp - 1)) / cpp;
@@ -333,6 +333,7 @@
         card.style.flex = `0 0 ${cardW}px`;
       });
 
+      /* dots */
       dots.innerHTML = '';
       for(let i=0;i<pages;i++){
         const d=document.createElement('span');
@@ -349,20 +350,24 @@
       idx=(p+pages)%pages;
       track.style.transition=anim?'transform .6s ease':'none';
       track.style.transform=`translateX(-${idx*(100/pages)}%)`;
-      dots.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active', i===idx));
+      dots.querySelectorAll('.dot').forEach((d,i)=>
+        d.classList.toggle('active', i===idx)
+      );
     }
 
     setInterval(()=>slide(idx+1),7000);
     window.addEventListener('resize', buildCarousel);
     buildCarousel();
 
-    /* ─── 3-D Tilt on cards ────────────────────────────── */
+    /* ─── 3-D tilt on cards ────────────────────────────── */
     document.querySelectorAll('.card').forEach(card=>{
-      const w=card.offsetWidth,h=card.offsetHeight,max=8;
+      const max=8;
       card.addEventListener('mousemove',e=>{
-        const {offsetX:x,offsetY:y}=e;
-        const rotY=((x-w/2)/(w/2))*max;
-        const rotX=((y-h/2)/(h/2))*-max;
+        const rect = card.getBoundingClientRect(),
+              x = e.clientX - rect.left,
+              y = e.clientY - rect.top,
+              rotY = ((x-rect.width/2)/(rect.width/2))*max,
+              rotX = ((y-rect.height/2)/(rect.height/2))*-max;
         card.style.transform=`perspective(900px) rotateX(${rotX}deg) rotateY(${rotY}deg)`;
       });
       card.addEventListener('mouseleave',()=>card.style.transform='perspective(900px)');
