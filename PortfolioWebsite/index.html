@@ -1,418 +1,1119 @@
-<!-- =====================  index.html  ===================== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anupa Kehelgamuwa | AK</title>
+  <title>Anupa Kehelgamuwa | Full Stack Developer</title>
 
   <link rel="icon" href="images/Anupa_-_Web_Tab_logo.png" />
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- icons + GSAP -->
+  <!-- Icons & Scripts -->
   <script src="https://kit.fontawesome.com/c69f750e65.js" crossorigin="anonymous" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
 
-  <!--  Open-Graph stuff  -->
-  <meta property="og:title"       content="Anupa Kehel" />
-  <meta property="og:description" content="Hi, It's me Anupa Kehelgamuwa" />
-  <meta property="og:image"       content="https://media.discordapp.net/attachments/1255768997580902491/1371604334743126046/Anupa_-_Meta.png?ex=6823bd94&is=68226c14&hm=94f2ae1dd212b433cf0fd7ca0625a92176d413111168dab9c1612466c77451f2&format=webp&quality=lossless&" />
-  <meta property="og:url"         content="https://anupainfo.vercel.app/" />
-  <meta property="og:type"        content="website" />
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Anupa Kehelgamuwa - Full Stack Developer" />
+  <meta property="og:description" content="Software Engineering Intern specializing in modern web development and innovative solutions" />
+  <meta property="og:image" content="https://media.discordapp.net/attachments/1255768997580902491/1371604334743126046/Anupa_-_Meta.png" />
+  <meta property="og:url" content="https://anupainfo.vercel.app/" />
+  <meta property="og:type" content="website" />
 </head>
 
 <body>
+  <!-- Animated Background Elements -->
+  <div class="bg-animation">
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+      <div class="shape shape-5"></div>
+    </div>
+  </div>
 
-  <!-- ╭─ NAVIGATION BAR ───────────────────────────────╮ -->
-  <nav class="navbar glass">
-    <a href="#header" class="brand">
-      <img src="images/Logo_-_Anupa.png" alt="logo">
-    </a>
+  <!-- Navigation Bar -->
+  <nav class="nav-modern">
+    <div class="nav-modern-container">
+        <a href="#header" class="nav-modern-brand">
+            <img src="images/Logo_-_Anupa.png" alt="Anupa Kehelgamuwa Logo">
+        </a>
 
-    <button class="nav-toggle" aria-label="toggle navigation">
-      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-    </button>
+        <button class="nav-modern-toggle" aria-label="Toggle Navigation Menu">
+            <span class="nav-modern-bar"></span>
+            <span class="nav-modern-bar"></span>
+            <span class="nav-modern-bar"></span>
+        </button>
 
-    <ul class="nav-links">
-      <li><a href="#header"    class="nav-item active">Home</a></li>
-      <li><a href="#about"     class="nav-item">About</a></li>
-      <li><a href="#portfolio" class="nav-item">Portfolio</a></li>
-      <li><a href="#contact"   class="nav-item">Contact</a></li>
-    </ul>
+        <div class="nav-modern-menu">
+            <ul class="nav-modern-list">
+                <li class="nav-modern-item">
+                    <a href="#header" class="nav-modern-link active">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-modern-item">
+                    <a href="#about" class="nav-modern-link">
+                        <i class="fas fa-user"></i>
+                        <span>About</span>
+                    </a>
+                </li>
+                <li class="nav-modern-item">
+                    <a href="#portfolio" class="nav-modern-link">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Portfolio</span>
+                    </a>
+                </li>
+                <li class="nav-modern-item">
+                    <a href="#contact" class="nav-modern-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="nav-modern-progress"></div>
   </nav>
 
-  <!-- ╭─ HERO ───────────────────────────────────────────╮ -->
+  <!-- Hero Section -->
   <header id="header" class="snap hero-section">
     <div class="hero-overlay"></div>
-
-    <div class="hero-inner container">
-      <h1 class="hero-heading">
-        <span class="hi">Hi, I’m</span>
-        <span class="name">Anupa Kehelgamuwa</span>
-      </h1>
-
-      <div class="typewriter-wrap">
-        <span class="typewriter-text">LEARN • ADAPT • DELIVER •</span>
-      </div>
-
-      <p class="meta-info">
-        <i class="fa-solid fa-code-branch"></i>
-        <span>Software Engineering Intern</span>
-
-        <i class="fa-solid fa-location-dot sep"></i>
-        <span>Colombo, Sri&nbsp;Lanka</span>
-
-        <i class="fa-solid fa-building sep"></i>
-        <a href="https://ossec.co.jp/" target="_blank">Ossec&nbsp;Inc.</a>
-      </p>
-
-      <div class="cta-buttons">
-        <a href="#portfolio" class="btn primary glow">View&nbsp;Portfolio</a>
-        <a href="#contact" class="btn outline">Connect</a>
-      </div>
+    
+    <div class="hero-particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
     </div>
 
-    <div class="scroll-indicator"><span></span></div>
-  </header>
-
-  <!-- ╭─ ABOUT ──────────────────────────────────────────╮ -->
-  <section id="about" class="snap reveal">
-    <div class="about-card">
-      <div class="avatar-blob">
-        <img src="images/profile_pic.JPEG" alt="profile">
-      </div>
-
-      <div class="about-content">
-        <h2 class="about-title">About Me <span class="emoji">⚡</span></h2>
-
-        <p class="about-text">
-          Hi! I’m <strong class="highlight">Anupa Kehelgamuwa</strong>, a Sri-Lankan
-          <strong class="highlight">Full-Stack Developer</strong> obsessed with building fast,
-          scalable products. My toolbox overflows with:<br>
-          <span class="tool-list">· Java · Spring Boot · Angular · Kotlin · Flutter · SQL</span>
-        </p>
-
-        <p class="about-text">
-          I’m wrapping up a <strong class="highlight">BSc in Computer Science</strong>, and I’ve
-          already shipped live ticketing platforms, indie&nbsp;3-D games, and multi-tenant
-          transaction systems. I learn at lightspeed and write code that feels like poetry.
-        </p>
-
-        <!-- stats -->
-        <div class="stats">
-          <div><span class="counter" data-val="4">0</span><small>YEARS CODING</small></div>
-          <div><span class="counter" data-val="25">0</span><small>PROJECTS</small></div>
-          <div><span class="counter" data-val="734">0</span><small>CUPS OF COFFEE</small></div>
+    <div class="hero-inner container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fas fa-rocket"></i>
+          <span>Available for opportunities</span>
         </div>
 
-        <!-- tabs -->
-        <nav class="tab-bar">
-          <button class="tab-btn active" onclick="openTab('skills')">Skills</button>
-          <button class="tab-btn"        onclick="openTab('edu')">Education</button>
-          <button class="tab-btn"        onclick="openTab('extra')">Extracurricular</button>
-        </nav>
+        <h1 class="hero-heading">
+          <span class="greeting">Hello, I'm</span>
+          <span class="name">Anupa Kehelgamuwa</span>
+          <span class="role">Full Stack Developer</span>
+        </h1>
 
-        <div class="tab-panel active" id="skills">
-          <div class="chip-grid">
-            <span class="chip">Java</span><span class="chip">Spring Boot</span>
-            <span class="chip">Angular</span><span class="chip">Kotlin</span>
-            <span class="chip">Flutter</span><span class="chip">SQL</span>
-            <span class="chip">TypeScript</span><span class="chip">PHP</span>
-            <span class="chip">Python</span>
+        <div class="animated-text-container">
+          <div class="animated-text">
+            <span class="text-item">INNOVATE</span>
+            <span class="text-item">CODE</span>
+            <span class="text-item">DELIVER</span>
           </div>
         </div>
 
-        <div class="tab-panel" id="edu">
-          <ul class="edu-list">
-            <li><span>IIT — BSc (Hons) Computer Science</span><em>&nbsp;Expected&nbsp;Aug&nbsp;2027</em></li>
-            <li><span>GCE A-Levels</span><em>&nbsp;3 A</em></li>
-            <li><span>GCE O-Levels</span><em>&nbsp;8 A&nbsp;· 1 B</em></li>
-          </ul>
+        <p class="hero-description">
+          Passionate software engineering intern crafting digital experiences with modern technologies and creative problem-solving approaches.
+        </p>
+
+        <div class="meta-info">
+          <div class="meta-item">
+            <i class="fas fa-code"></i>
+            <span>Software Engineering Intern</span>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Colombo, Sri Lanka</span>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <i class="fas fa-building"></i>
+            <a href="https://ossec.co.jp/" target="_blank" rel="noopener">Ossec Inc.</a>
+          </div>
         </div>
 
-        <div class="tab-panel" id="extra">
-          <ul class="extra-list">
-            <li>Junior Steward of Royal&nbsp;College</li>
-            <li>Committee member — Roy-Tho Battle of the Blues</li>
-            <li>Committee member — Interact Club of Royal College</li>
-          </ul>
+        <div class="cta-section">
+          <div class="cta-buttons">
+            <a href="#portfolio" class="btn primary">
+              <span>View Portfolio</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn secondary">
+              <span>Let's Connect</span>
+              <i class="fas fa-paper-plane"></i>
+            </a>
+          </div>
+
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-avatar">
+          <div class="avatar-ring"></div>
+          <div class="avatar-inner">
+            <i class="fas fa-user-astronaut"></i>
+          </div>
+          <div class="tech-orbit">
+            <div class="tech-icon" style="--delay: 0s;"><i class="fab fa-react"></i></div>
+            <div class="tech-icon" style="--delay: 1s;"><i class="fab fa-node-js"></i></div>
+            <div class="tech-icon" style="--delay: 2s;"><i class="fab fa-python"></i></div>
+            <div class="tech-icon" style="--delay: 3s;"><i class="fab fa-js-square"></i></div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ╭─ PORTFOLIO ────────────────────────────────────────╮ -->
-  <section id="portfolio" class="snap reveal">
-    <div class="container">
-      <h2 class="section-title">My Work</h2>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span class="scroll-text">Scroll to explore</span>
+    </div>
+  </header>
 
-      <div class="carousel-window">
-        <div class="carousel-track" id="track">
-          <!-- card 1 -->
-          <article class="card">
-            <div class="card-img"><img src="images/work1.png" alt=""></div>
-            <div class="card-info">
-              <h3 class="card-title">Realtime-Ticketing System</h3>
-              <p  class="card-desc">Java Spring Boot &amp; Angular API powering real-time ticket-sales.</p>
-              <div class="tag-wrap">
-                <span class="tag">Java</span><span class="tag">Spring Boot</span>
-                <span class="tag">Angular</span><span class="tag">SQL</span>
-              </div>
+  <!-- About Section -->
+  <section id="about" class="about-modern">
+    <div class="about-modern-card">
+        <!-- Left Panel - Avatar -->
+        <div class="about-modern-avatar">
+            <div class="avatar-modern-container">
+                <div class="avatar-modern-blob"></div>
+                <div class="avatar-modern-image">
+                    <img src="images\profile_pic.JPEG" alt="profile">
+                </div>
+                <div class="avatar-modern-badge">
+                    Full-Stack Developer
+                </div>
             </div>
-            <span class="card-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-          </article>
-
-          <!-- card 2 -->
-          <article class="card">
-            <div class="card-img"><img src="images/work1.png" alt=""></div>
-            <div class="card-info">
-              <h3 class="card-title">Project Infratrack</h3>
-              <p  class="card-desc">Community infrastructure reporting app + ML model.</p>
-              <div class="tag-wrap">
-                <span class="tag">Java</span><span class="tag">Spring Boot</span>
-                <span class="tag">Python</span><span class="tag">Flutter</span><span class="tag">MongoDB</span>
-              </div>
-            </div>
-            <span class="card-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-          </article>
-
-          <!-- card 3 -->
-          <article class="card">
-            <div class="card-img"><img src="images/work1.png" alt=""></div>
-            <div class="card-info">
-              <h3  class="card-title">Dice Game</h3>
-              <p   class="card-desc">A simple dice-game built with Kotlin + Jetpack Compose.</p>
-              <div class="tag-wrap"><span class="tag">Kotlin</span></div>
-            </div>
-            <span class="card-cta"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-          </article>
-        </div><!-- /track -->
-      </div><!-- /carousel-window -->
-      <div class="dots" id="dots"></div>
-    </div><!-- /container -->
-  </section>
-
-  <!-- ╭─ CONTACT ──────────────────────────────────────────╮ -->
-  <section id="contact" class="snap reveal">
-    <div class="contact-card">
-
-      <!-- left panel -->
-      <aside class="contact-info">
-        <h2>Get in Touch</h2>
-        <p class="tagline">Have a project or just want to say hi?<br>Feel free to reach out 👋</p>
-
-        <ul class="info-list">
-          <li><i class="fa-solid fa-envelope"></i> anupakehelgamuwa.04@gmail.com</li>
-          <li><i class="fa-solid fa-phone"></i> +94&nbsp;76&nbsp;393&nbsp;7851</li>
-          <li><i class="fa-solid fa-location-dot"></i> Colombo, Sri&nbsp;Lanka</li>
-        </ul>
-
-        <div class="social-row">
-          <a href="https://www.facebook.com/anupa.kehelgamuwa"  target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/anupa_.kehelgamuwa" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/anupa-kehelgamuwa-126289230/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://github.com/Anupakehelgamuwa2004"      target="_blank"><i class="fa-brands fa-github"></i></a>
         </div>
 
-        <a href="images/Anupa KEHELGAMUWA.pdf" download class="btn primary">Download CV</a>
-      </aside>
+        <!-- Right Panel - Content -->
+        <div class="about-modern-content">
+            <h2 class="about-modern-title">About Me</h2>
+            
+            <p class="about-modern-text">
+                Hi! I'm <span class="about-modern-highlight">Anupa Kehelgamuwa</span>, a Sri-Lankan
+                <span class="about-modern-highlight">Full-Stack Developer</span> obsessed with building fast,
+                scalable products that make a difference.
+            </p>
 
-      <!-- right panel -->
-      <form class="contact-form" id="contact-form" onsubmit="emailSend(event); return false;">
-  <div class="input-wrap">
-    <input type="text" id="name" name="user_name" required placeholder=" " />
-    <label for="name"><i class="fa-solid fa-user"></i> Your Name</label>
-  </div>
+            <div class="tech-modern-showcase">
+                <span class="tech-modern-label">My Tech Stack:</span>
+                <div class="tech-modern-flow">
+                    <span class="tech-modern-item" style="--delay: 0">Java</span>
+                    <span class="tech-modern-item" style="--delay: 0.2">Spring Boot</span>
+                    <span class="tech-modern-item" style="--delay: 0.4">Angular</span>
+                    <span class="tech-modern-item" style="--delay: 0.6">Kotlin</span>
+                    <span class="tech-modern-item" style="--delay: 0.8">Flutter</span>
+                    <span class="tech-modern-item" style="--delay: 1">SQL</span>
+                </div>
+            </div>
 
-  <div class="input-wrap">
-    <input type="email" id="email" name="user_email" required placeholder=" " />
-    <label for="email"><i class="fa-solid fa-at"></i> Email Address</label>
-  </div>
+            <p class="about-modern-text">
+                I'm wrapping up a <span class="about-modern-highlight">BSc in Computer Science</span>, and I've
+                already shipped live ticketing platforms, indie 3-D games, and multi-tenant
+                transaction systems. I learn at lightspeed and write code that feels like poetry.
+            </p>
 
-  <div class="input-wrap textarea">
-    <textarea id="message" name="message" rows="6" required placeholder=" "></textarea>
-    <label for="message"><i class="fa-solid fa-message"></i> Message</label>
-  </div>
+            <!-- Stats Grid -->
+            <div class="stats-modern-grid">
+                <div class="stat-modern-item">
+                    <div class="stat-modern-icon">🕐</div>
+                    <div class="stat-modern-number" data-value="4">0</div>
+                    <div class="stat-modern-label">Years Coding</div>
+                    <div class="stat-modern-progress" style="--progress: 80%"></div>
+                </div>
+                <div class="stat-modern-item">
+                    <div class="stat-modern-icon">🚀</div>
+                    <div class="stat-modern-number" data-value="25">0</div>
+                    <div class="stat-modern-label">Projects</div>
+                    <div class="stat-modern-progress" style="--progress: 65%"></div>
+                </div>
+                <div class="stat-modern-item">
+                    <div class="stat-modern-icon">☕</div>
+                    <div class="stat-modern-number" data-value="734">0</div>
+                    <div class="stat-modern-label">Cups of Coffee</div>
+                    <div class="stat-modern-progress" style="--progress: 95%"></div>
+                </div>
+            </div>
 
-  <button type="submit" class="btn primary glow send-btn">
-    <span>Send&nbsp;Message</span>
-    <i class="fa-solid fa-paper-plane"></i>
-  </button>
-</form>
+            <!-- Tabs -->
+            <div class="tab-modern-container">
+                <div class="tab-modern-bar">
+                    <button class="tab-modern-btn active" onclick="openModernTab('skills')">
+                        <span class="tab-modern-icon">💻</span>
+                        <span>Skills</span>
+                    </button>
+                    <button class="tab-modern-btn" onclick="openModernTab('edu')">
+                        <span class="tab-modern-icon">🎓</span>
+                        <span>Education</span>
+                    </button>
+                    <button class="tab-modern-btn" onclick="openModernTab('extra')">
+                        <span class="tab-modern-icon">⭐</span>
+                        <span>Leadership</span>
+                    </button>
+                </div>
 
+                <div class="tab-modern-content">
+                    <div class="tab-modern-panel active" id="skills">
+                        <div class="skills-modern-grid">
+                            <div class="skill-modern-category">
+                                <h4>Backend</h4>
+                                <div class="chip-modern-group">
+                                    <span class="chip-modern backend">Java</span>
+                                    <span class="chip-modern backend">Spring Boot</span>
+                                    <span class="chip-modern backend">Kotlin</span>
+                                    <span class="chip-modern backend">SQL</span>
+                                </div>
+                            </div>
+                            <div class="skill-modern-category">
+                                <h4>Frontend</h4>
+                                <div class="chip-modern-group">
+                                    <span class="chip-modern frontend">Angular</span>
+                                    <span class="chip-modern frontend">TypeScript</span>
+                                    <span class="chip-modern frontend">Flutter</span>
+                                </div>
+                            </div>
+                            <div class="skill-modern-category">
+                                <h4>Others</h4>
+                                <div class="chip-modern-group">
+                                    <span class="chip-modern other">PHP</span>
+                                    <span class="chip-modern other">Python</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-modern-panel" id="edu">
+                        <div class="skills-modern-grid">
+                            <div class="skill-modern-category">
+                                <h4>BSc (Hons) Computer Science</h4>
+                                <p class="about-modern-text">IIT</p>
+                                <p class="about-modern-text">Expected Aug 2027</p>
+                            </div>
+                            <div class="skill-modern-category">
+                                <h4>GCE A-Levels</h4>
+                                <p class="about-modern-text">3 A's</p>
+                            </div>
+                            <div class="skill-modern-category">
+                                <h4>GCE O-Levels</h4>
+                                <p class="about-modern-text">8 A's · 1 B</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-modern-panel" id="extra">
+                        <div class="skills-modern-grid">
+                            <div class="skill-modern-category">
+                                <h4>Junior Steward</h4>
+                                <p class="about-modern-text">Royal College</p>
+                            </div>
+                            <div class="skill-modern-category">
+                                <h4>Committee Member</h4>
+                                <p class="about-modern-text">Roy-Tho Battle of the Blues</p>
+                            </div>
+                            <div class="skill-modern-category">
+                                <h4>Committee Member</h4>
+                                <p class="about-modern-text">Interact Club of Royal College</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PORTFOLIO SECTION HTML -->
+<section id="portfolio" class="snap reveal">
+  <div class="container">
+    <div class="portfolio-header">
+      <h2 class="section-title">My Work</h2>
+      <p class="section-subtitle">Explore my latest projects and creations</p>
+    </div>
+    
+    <div class="portfolio-filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+      <button class="filter-btn" data-filter="mobile">Mobile</button>
+      <button class="filter-btn" data-filter="ai">AI/ML</button>
     </div>
 
-    <footer class="footer-bar">
-      © 2025 Anupa Kehelgamuwa · Made with ❤️
-    </footer>
-  </section>
+    <div class="carousel-window">
+      <div class="carousel-track" id="track">
+        <!-- Project Card 1 -->
+        <article class="card" data-category="fullstack" data-project="ticketing">
+          <div class="card-header">
+            <div class="card-img">
+              <img src="images/work1.png" alt="Realtime Ticketing System Preview">
+              <div class="img-overlay">
+                <div class="overlay-content">
+                  <button class="view-project" data-project="ticketing">
+                    <i class="fas fa-external-link-alt"></i>
+                    View Project
+                  </button>
+                  <a href="#" class="view-code">
+                    <i class="fab fa-github"></i>
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card-badge">Full Stack</div>
+          </div>
+          
+          <div class="card-content">
+            <div class="card-info">
+              <h3 class="card-title">Realtime Ticketing System</h3>
+              <p class="card-desc">Enterprise-grade Java Spring Boot & Angular API powering real-time ticket sales with WebSocket integration and secure payment processing.</p>
+            </div>
+            
+            <div class="card-footer">
+              <div class="tag-wrap">
+                <span class="tag tech">Java</span>
+                <span class="tag tech">Spring Boot</span>
+                <span class="tag tech">Angular</span>
+                <span class="tag db">SQL</span>
+              </div>
+              <div class="card-meta">
+                <span class="project-date">2024</span>
+              </div>
+            </div>
+          </div>
+        </article>
 
-  <!-- ╭─ SCRIPTS ───────────────────────────────────────────╮ -->
- <!-- ╭─ SCRIPTS ───────────────────────────────────────────╮ -->
+        <!-- Project Card 2 -->
+        <article class="card" data-category="ai">
+          <div class="card-header">
+            <div class="card-img">
+              <img src="images/work2.png" alt="Project Infratrack Preview">
+              <div class="img-overlay">
+                <div class="overlay-content">
+                  <a href="#" class="view-project">
+                    <i class="fas fa-external-link-alt"></i>
+                    View Project
+                  </a>
+                  <a href="#" class="view-code">
+                    <i class="fab fa-github"></i>
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card-badge">AI/ML</div>
+          </div>
+          
+          <div class="card-content">
+            <div class="card-info">
+              <h3 class="card-title">Project Infratrack</h3>
+              <p class="card-desc">AI-powered community infrastructure reporting platform with machine learning models for automatic issue classification and priority assessment.</p>
+            </div>
+            
+            <div class="card-footer">
+              <div class="tag-wrap">
+                <span class="tag tech">Java</span>
+                <span class="tag tech">Spring Boot</span>
+                <span class="tag ai">Python</span>
+                <span class="tag mobile">Flutter</span>
+                <span class="tag db">MongoDB</span>
+              </div>
+              <div class="card-meta">
+                <span class="project-date">2024</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project Card 3 -->
+        <article class="card" data-category="mobile">
+          <div class="card-header">
+            <div class="card-img">
+              <img src="images/work3.png" alt="Dice Game Preview">
+              <div class="img-overlay">
+                <div class="overlay-content">
+                  <a href="#" class="view-project">
+                    <i class="fas fa-external-link-alt"></i>
+                    View Project
+                  </a>
+                  <a href="#" class="view-code">
+                    <i class="fab fa-github"></i>
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card-badge">Mobile</div>
+          </div>
+          
+          <div class="card-content">
+            <div class="card-info">
+              <h3 class="card-title">Interactive Dice Game</h3>
+              <p class="card-desc">Modern Android dice game featuring smooth animations, multiplayer support, and beautiful Material Design 3 UI built with Kotlin and Jetpack Compose.</p>
+            </div>
+            
+            <div class="card-footer">
+              <div class="tag-wrap">
+                <span class="tag mobile">Kotlin</span>
+                <span class="tag mobile">Jetpack Compose</span>
+                <span class="tag mobile">Material 3</span>
+              </div>
+              <div class="card-meta">
+                <span class="project-date">2024</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project Card 4 -->
+        <article class="card" data-category="fullstack">
+          <div class="card-header">
+            <div class="card-img">
+              <img src="images/work4.png" alt="E-Commerce Platform Preview">
+              <div class="img-overlay">
+                <div class="overlay-content">
+                  <a href="#" class="view-project">
+                    <i class="fas fa-external-link-alt"></i>
+                    View Project
+                  </a>
+                  <a href="#" class="view-code">
+                    <i class="fab fa-github"></i>
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card-badge">Full Stack</div>
+          </div>
+          
+          <div class="card-content">
+            <div class="card-info">
+              <h3 class="card-title">E-Commerce Platform</h3>
+              <p class="card-desc">Full-stack e-commerce solution with real-time inventory management, secure payment processing, and admin dashboard.</p>
+            </div>
+            
+            <div class="card-footer">
+              <div class="tag-wrap">
+                <span class="tag tech">React</span>
+                <span class="tag tech">Node.js</span>
+                <span class="tag db">MongoDB</span>
+                <span class="tag tech">Redux</span>
+              </div>
+              <div class="card-meta">
+                <span class="project-date">2024</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project Card 5 -->
+        <article class="card" data-category="ai">
+          <div class="card-header">
+            <div class="card-img">
+              <img src="images/work5.png" alt="AI Chat Assistant Preview">
+              <div class="img-overlay">
+                <div class="overlay-content">
+                  <a href="#" class="view-project">
+                    <i class="fas fa-external-link-alt"></i>
+                    View Project
+                  </a>
+                  <a href="#" class="view-code">
+                    <i class="fab fa-github"></i>
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card-badge">AI/ML</div>
+          </div>
+          
+          <div class="card-content">
+            <div class="card-info">
+              <h3 class="card-title">AI Chat Assistant</h3>
+              <p class="card-desc">Intelligent chatbot powered by machine learning, featuring natural language processing and context-aware responses.</p>
+            </div>
+            
+            <div class="card-footer">
+              <div class="tag-wrap">
+                <span class="tag ai">Python</span>
+                <span class="tag ai">TensorFlow</span>
+                <span class="tag tech">Flask</span>
+                <span class="tag tech">React</span>
+              </div>
+              <div class="card-meta">
+                <span class="project-date">2024</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project Card 6 -->
+        <article class="card" data-category="mobile">
+          <div class="card-header">
+            <div class="card-img">
+              <img src="images/work6.png" alt="Fitness Tracker App Preview">
+              <div class="img-overlay">
+                <div class="overlay-content">
+                  <a href="#" class="view-project">
+                    <i class="fas fa-external-link-alt"></i>
+                    View Project
+                  </a>
+                  <a href="#" class="view-code">
+                    <i class="fab fa-github"></i>
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card-badge">Mobile</div>
+          </div>
+          
+          <div class="card-content">
+            <div class="card-info">
+              <h3 class="card-title">Fitness Tracker App</h3>
+              <p class="card-desc">Cross-platform fitness tracking application with workout planning, progress monitoring, and social features.</p>
+            </div>
+            
+            <div class="card-footer">
+              <div class="tag-wrap">
+                <span class="tag mobile">Flutter</span>
+                <span class="tag tech">Firebase</span>
+                <span class="tag tech">Dart</span>
+                <span class="tag db">Cloud Firestore</span>
+              </div>
+              <div class="card-meta">
+                <span class="project-date">2024</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      
+      <div class="scroll-controls">
+        <button class="scroll-btn scroll-prev" aria-label="Previous project">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="scroll-btn scroll-next" aria-label="Next project">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-modern">
+    <div class="contact-modern-card">
+        <!-- Left Panel -->
+        <div class="contact-modern-info">
+            <h2>Get in Touch</h2>
+            <p class="contact-modern-tagline">Have a project or just want to say hi?<br>Feel free to reach out 👋</p>
+
+            <ul class="contact-modern-list">
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>anupakehelgamuwa.04@gmail.com</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+94 76 393 7851</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Colombo, Sri Lanka</span>
+                </li>
+            </ul>
+
+            <div class="contact-modern-social">
+                <a href="https://www.facebook.com/anupa.kehelgamuwa" target="_blank" title="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/anupa_.kehelgamuwa" target="_blank" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/anupa-kehelgamuwa-126289230/" target="_blank" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Anupakehelgamuwa2004" target="_blank" title="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+
+            <a href="images/Anupa KEHELGAMUWA.pdf" download class="contact-modern-submit">
+                <i class="fa-solid fa-download"></i>
+                <span>Download CV</span>
+            </a>
+        </div>
+
+        <!-- Right Panel -->
+        <form class="contact-modern-form" id="contact-form" onsubmit="emailSend(event); return false;">
+            <div class="contact-modern-input">
+                <input type="text" id="name" name="user_name" required placeholder=" " />
+                <label for="name"><i class="fa-solid fa-user"></i></label>
+            </div>
+
+            <div class="contact-modern-input">
+                <input type="email" id="email" name="user_email" required placeholder=" " />
+                <label for="email"><i class="fa-solid fa-at"></i></label>
+            </div>
+
+            <div class="contact-modern-input textarea">
+                <textarea id="message" name="message" rows="6" required placeholder=" "></textarea>
+                <label for="message"><i class="fa-solid fa-message"></i></label>
+            </div>
+
+            <button type="submit" class="contact-modern-submit">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </form>
+    </div>
+
+    <div class="contact-modern-footer">
+        © 2025 Anupa Kehelgamuwa · Made with ❤️
+    </div>
+</section>
+
+<!-- Project Modal -->
+<div class="project-modal" id="projectModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+        <button class="modal-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title"></h3>
+                <div class="modal-badge"></div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="" alt="Project Preview">
+                </div>
+                <div class="modal-details">
+                    <div class="modal-description"></div>
+                    <div class="modal-tech-stack">
+                        <h4>Technologies Used</h4>
+                        <div class="tech-tags"></div>
+                    </div>
+                    <div class="modal-features">
+                        <h4>Key Features</h4>
+                        <ul class="features-list"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="modal-link live" target="_blank">
+                    <i class="fas fa-external-link-alt"></i>
+                    View Live
+                </a>
+                <a href="#" class="modal-link code" target="_blank">
+                    <i class="fab fa-github"></i>
+                    View Code
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!-- JavaScript for Interactions -->
   <script>
-    /* ── mobile-nav toggle ─────────────────────────────── */
-    const toggle   = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    toggle.addEventListener('click', () => {
-      toggle.classList.toggle('open');
-      navLinks.classList.toggle('open');
-    });
-    navLinks.addEventListener('click', e => {
-      if (e.target.classList.contains('nav-item')) {
-        toggle.classList.remove('open');
-        navLinks.classList.remove('open');
-      }
-    });
+    // Modern Navigation Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const nav = document.querySelector('.nav-modern');
+        const navToggle = document.querySelector('.nav-modern-toggle');
+        const navMenu = document.querySelector('.nav-modern-menu');
+        const navLinks = document.querySelectorAll('.nav-modern-link');
+        let lastScroll = 0;
 
-    /* ── active-link highlight on scroll ──────────────── */
-    const sections = ['header','about','portfolio','contact']
-      .map(id => document.getElementById(id));
-    window.addEventListener('scroll', () => {
-      let cur = sections[0].id;
-      sections.forEach(sec => {
-        if (scrollY + 95 >= sec.offsetTop) cur = sec.id;
-      });
-      document.querySelectorAll('.nav-item').forEach(a =>
-        a.classList.toggle('active', a.getAttribute('href') === '#' + cur)
-      );
-    });
+        // Scroll Progress Indicator
+        window.addEventListener('scroll', () => {
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            nav.style.setProperty('--scroll-width', `${scrollPercent}%`);
 
-    /* ── tab bar ───────────────────────────────────────── */
-    function openTab(id){
-      document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-      document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
-      event.currentTarget.classList.add('active');
-      document.getElementById(id).classList.add('active');
-    }
-
-    /* ── counters ─────────────────────────────────────── */
-    function runCounters(){
-      document.querySelectorAll('.counter').forEach(span=>{
-        const end = +span.dataset.val;
-        let cur = 0, step = Math.max(1, Math.ceil(end/50));
-        const tick = setInterval(()=>{
-          cur += step;
-          span.textContent = cur >= end ? end : cur;
-          if(cur >= end) clearInterval(tick);
-        }, 25);
-      });
-    }
-
-    /* ── GSAP reveal + counter trigger ────────────────── */
-    window.addEventListener('load', ()=>{
-      gsap.registerPlugin(ScrollTrigger);
-      gsap.utils.toArray('.reveal').forEach(el=>{
-        gsap.from(el,{
-          opacity:0, y:120, duration:1,
-          ease:'back.out(1.7)',
-          scrollTrigger:{ trigger:el, start:'top 80%' }
+            // Hide/show navbar on scroll
+            const currentScroll = window.scrollY;
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                nav.style.transform = 'translateY(-100%)';
+            } else {
+                nav.style.transform = 'translateY(0)';
+            }
+            lastScroll = currentScroll;
         });
-      });
-      ScrollTrigger.create({
-        trigger:'#about',
-        start:'top 55%',
-        once:true,
-        onEnter: runCounters
-      });
-    });
 
-    /* ── carousel (new slide maths) ───────────────────── */
-    const track = document.getElementById('track'),
-          dots  = document.getElementById('dots');
-    let idx = 0;
+        // Mobile Navigation Toggle
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('open');
+            navMenu.classList.toggle('open');
+            document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
+        });
 
-    function getSizes(){
-      const gap   = parseFloat(getComputedStyle(track).gap);
-      const winW  = track.parentElement.clientWidth;
-      return {gap, winW};
-    }
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !navToggle.contains(e.target) && navMenu.classList.contains('open')) {
+                navMenu.classList.remove('open');
+                navToggle.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        });
 
-    function buildCarousel(){
-      const {gap, winW} = getSizes();
-      const cpp   = innerWidth > 1024 ? 3 : innerWidth > 640 ? 2 : 1; // cards / page
-      const total = track.children.length;
-      const pages = Math.ceil(total / cpp);
+        // Smooth scrolling with offset
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    const navHeight = nav.offsetHeight;
+                    const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = targetPosition - navHeight;
 
-      /* dynamic sizing */
-      const cardW = (winW - gap * (cpp - 1)) / cpp;
-      const trackW = pages * winW + gap * (pages - 1);
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
 
-      track.style.width = trackW + 'px';
-      [...track.children].forEach(c => c.style.flex = `0 0 ${cardW}px`);
+                    // Close mobile menu if open
+                    navMenu.classList.remove('open');
+                    navToggle.classList.remove('open');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
 
-      /* dots */
-      dots.innerHTML = '';
-      for(let i=0;i<pages;i++){
-        const d=document.createElement('span');
-        d.className='dot'+(i===0?' active':'');
-        d.onclick=()=>slide(i);
-        dots.appendChild(d);
-      }
-      track.dataset.pages = pages;
-      slide(0,false);
-    }
+        // Active link highlighting
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: `-${nav.offsetHeight}px 0px 0px 0px`
+        };
 
-    function slide(p, anim=true){
-      const pages = +track.dataset.pages;
-      idx = (p + pages) % pages;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
 
-      const {gap, winW} = getSizes();           // fresh sizes every time
-      const offset = idx * (winW + gap);        // exact-pixel translation
+        // Observe all sections
+        document.querySelectorAll('section[id]').forEach(section => {
+            observer.observe(section);
+        });
 
-      track.style.transition = anim ? 'transform .6s ease' : 'none';
-      track.style.transform  = `translateX(-${offset}px)`;
-
-      dots.querySelectorAll('.dot').forEach((d,i)=>
-        d.classList.toggle('active', i === idx)
-      );
-    }
-
-    setInterval(()=>slide(idx+1),7000);
-    addEventListener('resize', buildCarousel);
-    buildCarousel();
-
-    /* ── 3-D tilt (unchanged) ─────────────────────────── */
-    document.querySelectorAll('.card').forEach(card=>{
-      const max=8;
-      card.addEventListener('mousemove',e=>{
-        const r = card.getBoundingClientRect(),
-              x = e.clientX - r.left,
-              y = e.clientY - r.top,
-              rotY = ((x - r.width/2) / (r.width/2))  * max,
-              rotX = ((y - r.height/2) / (r.height/2)) * -max;
-        card.style.transform=`perspective(900px) rotateX(${rotX}deg) rotateY(${rotY}deg)`;
-      });
-      card.addEventListener('mouseleave',()=>card.style.transform='perspective(900px)');
+        // Add hover effect to nav links
+        navLinks.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                link.style.transform = 'translateY(-2px)';
+            });
+            
+            link.addEventListener('mouseleave', () => {
+                link.style.transform = 'translateY(0)';
+            });
+        });
     });
   </script>
 
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script type="text/javascript">
-  (function() {
-    emailjs.init("ASVOFc88uy1njgDYd"); // from EmailJS dashboard
-  })();
-</script>
-<!-- EmailJS SDK -->
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // Modern Tab Functionality
+        function openModernTab(tabName) {
+            // Hide all panels
+            document.querySelectorAll('.tab-modern-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+            
+            // Remove active from all buttons
+            document.querySelectorAll('.tab-modern-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected panel
+            document.getElementById(tabName).classList.add('active');
+            
+            // Activate clicked button
+            event.target.closest('.tab-modern-btn').classList.add('active');
+        }
+
+        // Animate numbers
+        function animateNumbers() {
+            document.querySelectorAll('.stat-modern-number').forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-value'));
+                const duration = 2000; // 2 seconds
+                const step = target / (duration / 16); // 60fps
+                let current = 0;
+
+                const updateCounter = () => {
+                    current += step;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+
+                updateCounter();
+            });
+        }
+
+        // Initialize animations when section is in view
+        const aboutObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateNumbers();
+                    aboutObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const aboutSection = document.querySelector('.about-modern');
+            if (aboutSection) {
+                aboutObserver.observe(aboutSection);
+            }
+        });
+    </script>
+
+
+ <script>
+        // Placeholder for email functionality
+        function emailSend(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Simple validation
+            if (!name || !email || !message) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Show success message (replace with actual email service)
+            alert('Thank you for your message! I\'ll get back to you soon.');
+            
+            // Reset form
+            document.getElementById('contact-form').reset();
+        }
+
+        // Add reveal animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealElements = document.querySelectorAll('.reveal');
+            revealElements.forEach(el => observer.observe(el));
+        });
+    </script>
+
 <script>
-  (function() {
-    emailjs.init("2SaRuPtHQNERtiCGc"); // Your public key
-  })();
+    // Portfolio filtering functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.card');
 
-  function emailSend(event) {
-    event.preventDefault();
-    
-    const form = document.getElementById("contact-form");
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
 
-    emailjs.sendForm('service_dyygz05', 'template_yheweol', form)
-      .then(() => {
-        alert("✅ Email sent successfully!");
-        form.reset();
-      }, (error) => {
-        alert("❌ Failed to send email: " + error.text);
-      });
-  }
+                const filter = btn.getAttribute('data-filter');
+
+                cards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                        setTimeout(() => card.style.opacity = '1', 50);
+                    } else {
+                        card.style.opacity = '0';
+                        setTimeout(() => card.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
+    });
+</script>
+
+<script>
+    // Portfolio carousel functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const track = document.getElementById('track');
+        const prevBtn = document.querySelector('.scroll-prev');
+        const nextBtn = document.querySelector('.scroll-next');
+        const cardWidth = 350; // Match the card width from CSS
+        const gap = 32; // Match the gap from CSS (2rem = 32px)
+        const scrollAmount = cardWidth + gap;
+
+        function scrollLeft() {
+            const currentScroll = track.scrollLeft;
+            const targetScroll = Math.max(0, currentScroll - scrollAmount);
+            track.scrollTo({
+                left: targetScroll,
+                behavior: 'smooth'
+            });
+        }
+
+        function scrollRight() {
+            const currentScroll = track.scrollLeft;
+            const maxScroll = track.scrollWidth - track.clientWidth;
+            const targetScroll = Math.min(maxScroll, currentScroll + scrollAmount);
+            track.scrollTo({
+                left: targetScroll,
+                behavior: 'smooth'
+            });
+        }
+
+        // Update button states based on scroll position
+        function updateButtonStates() {
+            prevBtn.style.opacity = track.scrollLeft > 0 ? '1' : '0.5';
+            nextBtn.style.opacity = 
+                track.scrollLeft < (track.scrollWidth - track.clientWidth - 10) ? '1' : '0.5';
+        }
+
+        // Add event listeners
+        prevBtn.addEventListener('click', scrollLeft);
+        nextBtn.addEventListener('click', scrollRight);
+        track.addEventListener('scroll', updateButtonStates);
+
+        // Optional: Add keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') {
+                scrollLeft();
+            } else if (e.key === 'ArrowRight') {
+                scrollRight();
+            }
+        });
+
+        // Initial button state
+        updateButtonStates();
+    });
+</script>
+
+<script>
+    // Project Data
+    const projectData = {
+        ticketing: {
+            title: "Realtime Ticketing System",
+            category: "Full Stack",
+            image: "images/work1.png",
+            description: "A sophisticated ticketing platform built with Java Spring Boot and Angular, featuring real-time updates, secure payment processing, and an intuitive user interface. The system handles high-concurrency scenarios and provides seamless user experience for both customers and administrators.",
+            techStack: ["Java", "Spring Boot", "Angular", "SQL", "WebSocket", "JWT"],
+            features: [
+                "Real-time ticket availability updates",
+                "Secure payment gateway integration",
+                "Admin dashboard for event management",
+                "User authentication and authorization",
+                "Email notifications and confirmations",
+                "Analytics and reporting tools"
+            ],
+            liveLink: "#",
+            codeLink: "#"
+        }
+        // Add more projects here
+    };
+
+    // Modal Functionality
+    const modal = document.getElementById('projectModal');
+    const modalClose = modal.querySelector('.modal-close');
+    const modalOverlay = modal.querySelector('.modal-overlay');
+
+    // Open Modal
+    document.querySelectorAll('.view-project').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const projectId = e.currentTarget.dataset.project;
+            const project = projectData[projectId];
+            
+            if (project) {
+                // Update Modal Content
+                modal.querySelector('.modal-title').textContent = project.title;
+                modal.querySelector('.modal-badge').textContent = project.category;
+                modal.querySelector('.modal-image img').src = project.image;
+                modal.querySelector('.modal-description').textContent = project.description;
+                
+                // Update Tech Stack
+                const techTags = modal.querySelector('.tech-tags');
+                techTags.innerHTML = project.techStack.map(tech => 
+                    `<span class="tech-tag">${tech}</span>`
+                ).join('');
+                
+                // Update Features
+                const featuresList = modal.querySelector('.features-list');
+                featuresList.innerHTML = project.features.map(feature => 
+                    `<li><i class="fas fa-check"></i>${feature}</li>`
+                ).join('');
+                
+                // Update Links
+                modal.querySelector('.modal-link.live').href = project.liveLink;
+                modal.querySelector('.modal-link.code').href = project.codeLink;
+                
+                // Show Modal
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    // Close Modal
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    modalClose.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', closeModal);
+
+    // Close on Escape Key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
 </script>
 
 </body>
