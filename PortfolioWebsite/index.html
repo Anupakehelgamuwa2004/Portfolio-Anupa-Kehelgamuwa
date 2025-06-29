@@ -343,7 +343,7 @@
 <section id="portfolio" class="snap reveal">
   <div class="container">
     <div class="portfolio-header">
-      <h2 class="section-title">My Work</h2>
+      <h2 class="section-title">My Projects</h2>
       <p class="section-subtitle">Explore my latest projects and creations</p>
     </div>
     
@@ -798,7 +798,7 @@
 
         // Active link highlighting
         const observerOptions = {
-            threshold: 0.5,
+            threshold: 0.2,
             rootMargin: `-${nav.offsetHeight}px 0px 0px 0px`
         };
 
@@ -830,6 +830,14 @@
             link.addEventListener('mouseleave', () => {
                 link.style.transform = 'translateY(0)';
             });
+        });
+
+        // Force Home active when at the very top
+        window.addEventListener('scroll', () => {
+            if (window.scrollY === 0) {
+                navLinks.forEach(link => link.classList.remove('active'));
+                document.querySelector('.nav-modern-link[href="#header"]').classList.add('active');
+            }
         });
     });
   </script>

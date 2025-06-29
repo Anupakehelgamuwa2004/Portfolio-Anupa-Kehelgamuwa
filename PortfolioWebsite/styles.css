@@ -489,6 +489,7 @@ body {
   display: flex;
   align-items: center;
   padding: var(--space-xl) 0;
+  padding-top: var(--header-height); /* Add top padding for navbar */
 }
 
 .hero-overlay {
@@ -4260,4 +4261,48 @@ html {
         width: 100%;
         max-width: none;
     }
+}
+
+.animated-text {
+  position: relative;
+  height: 2.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.text-item {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(90deg, #0ea5e9, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textFade 6s infinite;
+}
+
+.text-item:nth-child(1) { animation-delay: 0s; }
+.text-item:nth-child(2) { animation-delay: 2s; }
+.text-item:nth-child(3) { animation-delay: 4s; }
+
+@keyframes textFade {
+  0%, 100% { opacity: 0; }
+  5%, 30% { opacity: 1; }
+  35%, 100% { opacity: 0; }
+}
+
+@media (max-width: 600px) {
+  .text-item {
+    font-size: 1.2rem;
+  }
+}
+
+.animated-text-container {
+  margin: 2rem 0;
 }
